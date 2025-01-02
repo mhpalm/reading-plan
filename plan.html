@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Reading Plan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-btn">Home</a>
+        <button id="sign-out-btn" class="nav-btn">Sign Out</button>
+    </nav>
+
+    <div class="container">
+        <h1>Bible Reading Plan</h1>
+        <div class="reading-card">
+            <h2>Day <span id="current-day">1</span> - <span id="current-date"></span></h2>
+            <p class="subtitle">Your daily Bible readings</p>
+            
+            <div id="readings" class="reading-sections">
+                <!-- Readings will be inserted here -->
+            </div>
+
+            <div class="navigation">
+                <button id="prev-btn" class="nav-btn">Previous</button>
+                <button id="next-btn" class="nav-btn">Next</button>
+            </div>
+            
+            <!-- Add comments section -->
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <div class="comment-form">
+                    <textarea id="comment-input" placeholder="Share your thoughts on today's readings..."></textarea>
+                    <button id="post-comment" class="nav-btn">Post Comment</button>
+                </div>
+                <div id="comments-list" class="comments-list">
+                    <!-- Comments will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="plan.js"></script>
+</body>
+</html> 

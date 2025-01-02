@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Reading Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-title">Bible Reading Tracker</div>
+        <div id="auth-container">
+            <div id="user-details" class="user-details" hidden></div>
+            <button id="signInBtn" class="nav-btn google-btn">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo" class="google-icon">
+                Sign in with Google
+            </button>
+            <button id="signOutBtn" class="nav-btn" hidden>Sign Out</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Bible Reading Plans</h1>
+        <div id="reading-plans" class="plan-grid">
+            <div class="plan-card" onclick="navigateToPlan('mcheyne')">
+                <h2>M'Cheyne Reading Plan</h2>
+                <p>Read through the New Testament and Psalms twice, and the rest of the Bible once each year</p>
+                <small>~4 chapters per day</small>
+            </div>
+        </div>
+        
+        <div class="activity-feed">
+            <h2>Recent Activity</h2>
+            <div id="activity-list">
+                <!-- Activity items will be inserted here -->
+            </div>
+            <button id="load-more-activity" class="load-more-btn">Show More...</button>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html> 
